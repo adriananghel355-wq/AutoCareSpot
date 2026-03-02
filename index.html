@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoCareSpot - Servizio di Pulizia Auto a Domicilio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="background-overlay"></div>
+    
+    <header>
+        <div class="container">
+            <h1 class="logo">AutoCareSpot</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#servizi">Servizi</a></li>
+                    <li><a href="#prenotazione">Prenota Ora</a></li>
+                    <li><a href="#contatti">Contatti</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h2>Pulizia Auto Professionale a Domicilio</h2>
+                <p>Affidati ai nostri esperti per una macchina sempre splendente</p>
+                <button class="btn-primary" onclick="scrollTo('prenotazione')">Prenota Subito</button>
+            </div>
+        </section>
+
+        <section id="servizi" class="servizi">
+            <div class="container">
+                <h2>I Nostri Servizi</h2>
+                <div class="servizi-grid">
+                    <div class="servizio-card">
+                        <h3>Lavaggio Esterno</h3>
+                        <p>Pulizia completa dell'esterno con prodotti professionali</p>
+                        <span class="prezzo">€ 25</span>
+                    </div>
+                    <div class="servizio-card">
+                        <h3>Pulizia Interni</h3>
+                        <p>Aspirazione e igienizzazione completa degli interni</p>
+                        <span class="prezzo">€ 35</span>
+                    </div>
+                    <div class="servizio-card">
+                        <h3>Pacchetto Completo</h3>
+                        <p>Esterno + Interno + Trattamento protettivo</p>
+                        <span class="prezzo">€ 55</span>
+                    </div>
+                    <div class="servizio-card">
+                        <h3>Lucidatura</h3>
+                        <p>Lucidatura professionale e protezione della vernice</p>
+                        <span class="prezzo">€ 45</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="prenotazione" class="prenotazione">
+            <div class="container">
+                <h2>Prenota il Tuo Servizio</h2>
+                <form class="form-booking" id="formBooking">
+                    <div class="form-group">
+                        <label for="nome">Nome Completo:</label>
+                        <input type="text" id="nome" name="nome" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="telefono">Telefono:</label>
+                        <input type="tel" id="telefono" name="telefono" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="auto">Modello Auto:</label>
+                        <input type="text" id="auto" name="auto" placeholder="Es. Fiat Punto" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="servizio">Servizio:</label>
+                        <select id="servizio" name="servizio" required>
+                            <option value="">Seleziona un servizio</option>
+                            <option value="lavaggio">Lavaggio Esterno - € 25</option>
+                            <option value="interni">Pulizia Interni - € 35</option>
+                            <option value="completo">Pacchetto Completo - € 55</option>
+                            <option value="lucidatura">Lucidatura - € 45</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="data">Data Preferita:</label>
+                        <input type="date" id="data" name="data" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="ora">Ora Preferita:</label>
+                        <input type="time" id="ora" name="ora" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="indirizzo">Indirizzo (dove vogliamo raggiungerti):</label>
+                        <textarea id="indirizzo" name="indirizzo" rows="3" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary">Conferma Prenotazione</button>
+                </form>
+                <div id="messaggio-conferma" class="messaggio-conferma" style="display: none;">
+                    ✓ Prenotazione confermata! Ti contatteremo presto per i dettagli.
+                </div>
+            </div>
+        </section>
+
+        <section id="contatti" class="contatti">
+            <div class="container">
+                <h2>Contattaci</h2>
+                <div class="contatti-info">
+                    <div class="contatto-item">
+                        <h3>📞 Telefono</h3>
+                        <p>+39 320 123 4567</p>
+                    </div>
+                    <div class="contatto-item">
+                        <h3>📧 Email</h3>
+                        <p>info@autocarespotonto.it</p>
+                    </div>
+                    <div class="contatto-item">
+                        <h3>📍 Zona Servizio</h3>
+                        <p>Tutta la provincia</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 AutoCareSpot. Tutti i diritti riservati.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
